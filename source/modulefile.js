@@ -1,8 +1,8 @@
 const _EXAMDATA = {
   teamInformation: {
     teamNumber : 5,
-    teamName: "아이즈원",
-    teamNameStory: "I(내향)인 사람들이 모여 하나가 된다",
+    teamName: "I z o n e",
+    teamNameStory: "I(내향적)인 사람들이 모여 하나가 된다",
     teamManager: "류은이",
     teamAllMember: [
       {
