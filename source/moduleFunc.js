@@ -42,6 +42,7 @@ function changeTitle(){
   headerTogle = false;
 }
 
+/*
 function mainProfile(num){
   
-}
+}*/

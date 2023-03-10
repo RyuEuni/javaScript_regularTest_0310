@@ -20,12 +20,19 @@ createEle("div", "", "", "", root.children[0]); //제목 들어갈 부분, heade
 for(let i = 0; i < memberCount; i++){
   createEle("div", "", "", "", root.children[1]); //팀 인원 정보카드 부분, main > div
 }
-for(let i = 0; i < memberCount; i++){
-  createEle("div", "", "", "", root.children[1].children[i]);
+
+createEle("div", "", "","Training Information", root.children[2]); // 트레이닝 제목 부분, footer > div
+createEle("ul", "", "", "", root.children[2]); //현재 진행중인 트레이닝 표시 부분, footer > ul
+root.children[2].children[1].style.listStyleType = "none";
+    
+//트레이닝 리스트 출력, footer > ul > li
+for(let i = 0; i < _EXAMDATA.trainingInformation.subject.length; i++){
+  createEle("li", "", "", _EXAMDATA.trainingInformation.subject[i], root.children[2].children[1]);
 }
 
+
   //멤버 이름 클릭할 때 나오는 정보 창 생성
-/*for(let i = 0; i < memberCount; i++){
+for(let i = 0; i < memberCount; i++){
   console.log(i)
   createEle("div", "id", "profileWin", "", root.children[1].children[i]); //main > div > div
   console.dir(root.children[1].children[i]);
@@ -52,19 +59,7 @@ for(let i = 0; i < memberCount; i++){
       }
     }
   }
-}*/
-console.dir(root.children[1]);
-
-createEle("div", "", "","Training Information", root.children[2]); // 트레이닝 제목 부분, footer > div
-createEle("ul", "", "", "", root.children[2]); //현재 진행중인 트레이닝 표시 부분, footer > ul
-root.children[2].children[1].style.listStyleType = "none";
-    
-//트레이닝 리스트 출력, footer > ul > li
-for(let i = 0; i < _EXAMDATA.trainingInformation.subject.length; i++){
-  createEle("li", "", "", _EXAMDATA.trainingInformation.subject[i], root.children[2].children[1]);
 }
-
-
 
 /*==========================스타일 적용 영역==============================*/
 const header = document.getElementById('header');
@@ -114,12 +109,6 @@ header.addEventListener('click', function(){
   }
 })
 
-main.children[0].addEventListener('click', function(){
-  if(mainTogle === true){
-
-  }
-  mainProfile(0)
-})
 /*
 main.children[1].addEventListener('click', mainProfile(1));
 main.children[2].addEventListener('click', mainProfile(2));
