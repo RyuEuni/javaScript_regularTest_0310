@@ -1,33 +1,39 @@
 const _EXAMDATA = {
   teamInformation: {
-    teamNumber : 0,
-    teamName: "팀명 작성",
-    teamNameStory: "팀명은 이런이유로 만들었답니다!",
-    teamManager: "공욱재",
+    teamNumber : 5,
+    teamName: "I z o n e",
+    teamNameStory: "I(내향적)인 사람들이 모여 하나가 된다",
+    teamManager: "류은이",
     teamAllMember: [
       {
-        memberNumber: 0,
-        name: "공욱재",
+        memberNumber: 1,
+        name: "류은이",
         teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        githubAddress: "https://github.com/RyuEuni"
       },
       {
-        memberNumber: 0,
-        name: "공욱재",
-        teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        memberNumber: 2,
+        name: "김종윤",
+        teamPosition: "팀원",
+        githubAddress: "https://github.com/kimjongyoon96"
       },
       {
-        memberNumber: 0,
-        name: "공욱재",
-        teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        memberNumber: 3,
+        name: "김지섭",
+        teamPosition: "팀원",
+        githubAddress: "https://github.com/JseopKim"
       },
       {
-        memberNumber: 0,
-        name: "공욱재",
-        teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        memberNumber: 4,
+        name: "김형진",
+        teamPosition: "팀원",
+        githubAddress: "https://github.com/bigbowltakestime"
+      },
+      {
+        memberNumber: 5,
+        name: "노수민",
+        teamPosition: "팀원",
+        githubAddress: "https://github.com/ujou173"
       },
     ]
   },
@@ -45,7 +51,7 @@ const _EXAMDATA = {
     ]
   },
   designInformation: {
-    colorSet : ["cadetblue", "salmon", "#ccc", "#333"],
+    colorSet : ["cadetblue", "salmon", "#F5FFFA", "#333", "white"],
     breakPoint : [ "768px", "1280px",  "1920px"]
   }
 }
