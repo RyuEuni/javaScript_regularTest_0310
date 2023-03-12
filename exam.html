@@ -12,12 +12,73 @@
 <body>
   <div id="root"></div>
   <script src="./source/modulefile.js"></script><!--변경하지 않을 것-->
+  <script src="./source/moduleFunc.js"></script>
   <script src="./source/moduleStyle.js"></script>
+
   <script>
-    const a = _EXAMDATA;
-    console.log(a); // 위 하이퍼링크된 js 파일 데이터
+  /*========================이벤트 함수 부르는 영역========================*/
+  
+    //제목 이벤트
+    header.addEventListener('click', function(){
+      if(headerTogle === true){
+        changeTitle();
+      }
+      else{
+        headerStyle();
+      }
+    })
+    //main, 이름 클릭 이벤트
+    mainSide.style.visibility = "hidden";
+    main.children[0].addEventListener('click', function(){
+      //첫번째 이름 클릭 시 나오는 정보 창
+      memberInfo(0, mainSide.children[0], "absolute", "200px", "350px", "", "");
     
+      mainSide.children[0].addEventListener('click', function(){
+        mainSide.style.visibility = "hidden";
+      });
+    });
+    main.children[1].addEventListener('click', function(){
+      //두번째 이름 클릭 시 나오는 정보 창
+      memberInfo(1, mainSide.children[0], "absolute", "300px", "350px", "", "");
     
+      mainSide.children[0].addEventListener('click', function(){
+        mainSide.style.visibility = "hidden";
+      });
+    
+    });
+    main.children[2].addEventListener('click', function(){
+      //세번째 이름 클릭 시 나오는 정보 창
+      memberInfo(2, mainSide.children[0], "absolute", "400px", "350px", "", "");
+    
+      mainSide.children[0].addEventListener('click', function(){
+        mainSide.style.visibility = "hidden";
+      });
+    
+    });
+    main.children[3].addEventListener('click', function(){
+      //네번째 이름 클릭 시 나오는 정보 창
+      memberInfo(3, mainSide.children[0], "absolute", "510px", "350px", "", "");
+    
+      mainSide.children[0].addEventListener('click', function(){
+        mainSide.style.visibility = "hidden";
+      });
+    
+    });
+    main.children[4].addEventListener('click', function(){
+      //다섯번째 이름 클릭 시 나오는 정보 창
+      memberInfo(4, mainSide.children[0], "absolute", "630px", "350px", "", "");
+    
+      mainSide.children[0].addEventListener('click', function(){
+        mainSide.style.visibility = "hidden";
+      });
+    });
+
+    //트레이닝 현재 정보 표시 이벤트 
+    footer.children[0].addEventListener('click', function(){
+      footer.children[1].children[4].style.border = "2px solid red";
+      trainingMark(footer.children[1].children[4])
+    })
+
   </script>
 </body>
 </html>
